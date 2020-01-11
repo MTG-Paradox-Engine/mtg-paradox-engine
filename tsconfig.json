@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "target": "ES2019",
+    "module": "system",
+    "outFile": "build/ts-engine.js",
+    "sourceMap": true,
+    "removeComments": true,
+    "alwaysStrict": true,
+    "strictNullChecks": true 
+  },
+  "include": [
+    "src/**/*.ts"
+  ]
+}
