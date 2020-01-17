@@ -1,9 +1,8 @@
 namespace Paradox {
+    /**
+     * Class representing a single player in a game.
+     */
     export class Player {
-        gameResult: PlayerGameResult;
         deck: Deck;
-        sideboard: Card.Card[]
-        startingLifeTotal: number;
-        currentLifeTotal: number;
     }
 }

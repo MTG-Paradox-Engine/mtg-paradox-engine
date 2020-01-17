@@ -3,6 +3,12 @@
     "target": "ES2019",
     "module": "system",
     "outFile": "build/ts-engine.js",
+
+    "baseUrl": ".",
+    "paths": {
+      "prando": ["node_modules/prando"]
+    },
+
     "sourceMap": true,
     "removeComments": true,
     "alwaysStrict": true,
