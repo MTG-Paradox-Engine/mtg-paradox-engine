@@ -1,15 +1,17 @@
-module Paradox.GameAction {
-    export abstract class ChangeTurnStep extends GameAction {
-        abstract readonly phase: TurnPhase;
-        abstract readonly step: TurnStep;
+import { Game } from "../Game";
+import { TurnPhase, TurnStep } from "../GameState";
+import { GameAction } from "./GameAction";
 
-        actOnImpl(game: Game): void {
-            game.state.currentPhase = this.phase;
-            game.state.currentStep = this.step;
+export abstract class ChangeTurnStep extends GameAction {
+    abstract readonly phase: TurnPhase;
+    abstract readonly step: TurnStep;
 
-            this.actOnImpl2(game);
-        }
+    actOnImpl(game: Game): void {
+        game.state.currentPhase = this.phase;
+        game.state.currentStep = this.step;
 
-        abstract actOnImpl2(game: Game): void;
+        this.actOnImpl2(game);
     }
+
+    abstract actOnImpl2(game: Game): void;
 }

@@ -1,13 +1,9 @@
 {
   "compilerOptions": {
     "target": "ES2019",
-    "module": "system",
-    "outFile": "build/ts-engine.js",
-
-    "baseUrl": ".",
-    "paths": {
-      "prando": ["node_modules/prando"]
-    },
+    "module": "System",
+    "outFile": "./build/ts-engine.js",
+    "moduleResolution": "Node",
 
     "sourceMap": true,
     "removeComments": true,

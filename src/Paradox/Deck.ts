@@ -1,11 +1,7 @@
-namespace Paradox {
-    export class Deck {
-        cards: Card.Card[];
-        sideboard: Card.Card[];
-        commander?: Card.Card;
+import { Card } from "./Card";
 
-        shuffle() {
-            Util.shuffle(this.cards);
-        }
-    }
+export class Deck {
+    cards: Card[];
+    sideboard: Card[];
+    commander?: Card;
 }

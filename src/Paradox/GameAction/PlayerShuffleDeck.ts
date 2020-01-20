@@ -1,18 +1,20 @@
-module Paradox.GameAction {
-    export class PlayerShuffleDeck extends GameAction {
-        changesGameStep: boolean = false;
-        changesGamePhase: boolean = false;
+import { Game } from "../Game";
+import { Player } from "../Player";
+import { GameAction } from "./GameAction";
 
-        randSeed: number;
-        player: Player;
+export class PlayerShuffleDeck extends GameAction {
+    changesGameStep: boolean = false;
+    changesGamePhase: boolean = false;
 
-        constructor(player: Player) {
-            super();
-            this.player = player;
-        }
+    randSeed: number;
+    player: Player;
 
-        actOnImpl(game: Game): void {
-            
-        }
+    constructor(player: Player) {
+        super();
+        this.player = player;
+    }
+
+    actOnImpl(game: Game): void {
+        
     }
 }
