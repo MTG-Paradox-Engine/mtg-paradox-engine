@@ -26,6 +26,6 @@ export class BeginGame extends GameAction {
 
         // 103.1. At the start of the game, each player shuffles their deck so that the cards
         // are in a random order.
-        game.futureActions.push()
+        // TODO
     }
 }

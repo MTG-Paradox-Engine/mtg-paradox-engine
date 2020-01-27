@@ -1,10 +1,10 @@
 import { Game } from "../Game";
 import { TurnPhase, TurnStep } from "../GameState";
-import { ChangeTurnStep } from "./ChangeGameStep";
+import { ChangeTurnStep } from "./ChangeTurnStep";
 
 export class BeginUpkeepStep extends ChangeTurnStep {
-    readonly phase: TurnPhase = TurnPhase.Beginning;
-    readonly step: TurnStep = TurnStep.Upkeep;
+    readonly phase: TurnPhase.Beginning;
+    readonly step: TurnStep.Upkeep;
 
     actOnImpl2(game: Game): void {
         // 503. Upkeep Step
