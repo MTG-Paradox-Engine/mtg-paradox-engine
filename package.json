@@ -1,0 +1,24 @@
+{
+  "name": "ts-engine",
+  "version": "0.0.1",
+  "description": "TypeScript implementation of the Magic: The Gathering rules engine.",
+  "main": "ts-engine.js",
+  "dependencies": {},
+  "devDependencies": {
+    "prando": "^5.1.2",
+    "typescript": "^3.7.5"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cariehl/mtg-paradox-engine.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cariehl/mtg-paradox-engine/issues"
+  },
+  "homepage": "https://github.com/cariehl/mtg-paradox-engine#readme"
+}
