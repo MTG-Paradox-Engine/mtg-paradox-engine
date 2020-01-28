@@ -1,0 +1,13 @@
+D:\Paradox\Card Builder\Card Builder\bin\Debug\Card Builder.exe.config
+D:\Paradox\Card Builder\Card Builder\bin\Debug\Card Builder.exe
+D:\Paradox\Card Builder\Card Builder\bin\Debug\Card Builder.pdb
+D:\Paradox\Card Builder\Card Builder\obj\Debug\Card Builder.csprojAssemblyReference.cache
+D:\Paradox\Card Builder\Card Builder\obj\Debug\Card_Builder.Form1.resources
+D:\Paradox\Card Builder\Card Builder\obj\Debug\Card_Builder.Properties.Resources.resources
+D:\Paradox\Card Builder\Card Builder\obj\Debug\Card Builder.csproj.GenerateResource.cache
+D:\Paradox\Card Builder\Card Builder\obj\Debug\Card Builder.csproj.CoreCompileInputs.cache
+D:\Paradox\Card Builder\Card Builder\obj\Debug\Card Builder.exe
+D:\Paradox\Card Builder\Card Builder\obj\Debug\Card Builder.pdb
+D:\Paradox\Card Builder\Card Builder\bin\Debug\Newtonsoft.Json.dll
+D:\Paradox\Card Builder\Card Builder\bin\Debug\Newtonsoft.Json.xml
+D:\Paradox\Card Builder\Card Builder\obj\Debug\Card Builder.csproj.CopyComplete
