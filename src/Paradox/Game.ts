@@ -1,5 +1,5 @@
-import { BeginGame } from "./GameAction/BeginGame";
-import { GameAction } from "./GameAction/GameAction";
+import { BeginGame } from "./Actions/BeginGame";
+import { GameAction } from "./Actions/GameAction";
 import { GameState } from "./GameState";
 import { PlayerTeam } from "./PlayerTeam";
 import { randomElement } from "./Util/Random";
@@ -21,17 +21,20 @@ export class Game {
     pastActions: GameAction[];
     futureActions: GameAction[];
 
+    /**
+     * Initialize a new game.
+     * @param teams Ordered list of player teams. The first element in this list represents the
+     * starting player team.
+     */
     constructor(teams: PlayerTeam[]) {
         this.state = new GameState(this, teams);
     }
 
     /**
-     * Start the game. Returns 
+     * Start the game. 
      */
-    startGame(startingTeam?: PlayerTeam) : void {
-        if (startingTeam == undefined)
-            startingTeam = randomElement(this.state.teams);
-
-        this.futureActions.push(new BeginGame(startingTeam));
+    run() : void {
+        console.log('Game is starting...');
+        
     }
 }

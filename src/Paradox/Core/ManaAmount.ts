@@ -1,5 +1,6 @@
 import { ImbalancedBraceError } from "../Error/ImbalancedBraceError";
 import { UnknownManaSymbolError } from "../Error/UnknownManaSymbolError";
+import { Color } from "./Color";
 
 /**
  * Class representing an amount of mana.
@@ -88,7 +89,7 @@ export class ManaAmount {
      * Add an amount of mana based on a symbol.
      * @param symbol Symbol of mana to add to this amount.
      */
-    public addFromSymbol(symbol: string) {
+    public addFromSymbol(symbol: string): void {
         // 107.4. The mana symbols are {W}, {U}, {B}, {R}, {G}, and {C}; the numerical symbols {0},
         // {1}, {2}, {3}, {4}, and so on; the variable symbol {X}; the hybrid symbols {W/U}, {W/B},
         // {U/B}, {U/R}, {B/R}, {B/G}, {R/G}, {R/W}, {G/W}, and {G/U}; the monocolored hybrid
@@ -221,5 +222,86 @@ export class ManaAmount {
                 this.generic += amount;
                 break;
         }
+    }
+
+    /**
+     * Get the colors represented by this mana amount.
+     */
+    public getColors(): Color[] {
+        let colors: Color[] = [];
+
+        let white: boolean = (this.white > 0 || this.hybridMonoWhite > 0 || this.phyrexianWhite > 0);
+        let blue: boolean = (this.blue > 0 || this.hybridMonoBlue > 0 || this.phyrexianBlue > 0);
+        let black: boolean = (this.black > 0 || this.hybridMonoBlack > 0 || this.phyrexianBlack > 0);
+        let red: boolean = (this.red > 0 || this.hybridMonoRed > 0 || this.phyrexianRed > 0);
+        let green: boolean = (this.green > 0 || this.hybridMonoGreen > 0 || this.phyrexianGreen > 0);
+
+        if (this.hybridWhiteBlue > 0)
+        {
+            white = true;
+            blue = true;
+        }
+
+        if (this.hybridWhiteBlack > 0)
+        {
+            white = true;
+            black = true;
+        }
+
+        if (this.hybridBlueBlack > 0)
+        {
+            blue = true;
+            black = true;
+        }
+
+        if (this.hybridBlueRed > 0)
+        {
+            blue = true;
+            red = true;
+        }
+
+        if (this.hybridBlackRed > 0)
+        {
+            black = true;
+            red = true;
+        }
+
+        if (this.hybridBlackGreen > 0)
+        {
+            black = true;
+            green = true;
+        }
+
+        if (this.hybridRedGreen > 0)
+        {
+            red = true;
+            green = true;
+        }
+
+        if (this.hybridRedWhite > 0)
+        {
+            white = true;
+            red = true;
+        }
+
+        if (this.hybridGreenWhite > 0)
+        {
+            green = true;
+            white = true;
+        }
+
+        if (this.hybridGreenBlue > 0)
+        {
+            green = true;
+            blue = true;
+        }
+
+        if (white) colors.push(Color.White);
+        if (blue) colors.push(Color.Blue);
+        if (black) colors.push(Color.Black);
+        if (red) colors.push(Color.Red);
+        if (green) colors.push(Color.Green);
+
+        return colors;
     }
 }

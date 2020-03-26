@@ -3,7 +3,7 @@ import { Player } from "./Player";
 import { PlayerTeam, PlayerTeamGameResult } from "./PlayerTeam";
 
 /**
- * Enum representing a phase within a single turn.
+ * A phase within a single turn.
  */
 export enum TurnPhase {
     Beginning,
@@ -14,7 +14,7 @@ export enum TurnPhase {
 }
 
 /**
- * Enum representing a step within a phase.
+ * A step within a phase.
  */
 export enum TurnStep {
     Untap,
@@ -32,9 +32,8 @@ export enum TurnStep {
 }
 
 /**
- * Class representing the state of the game at a given decision point. Includes everything
- * needed to reconstruct the game up to this point, including a list of actions that have been
- * taken in the game.
+ * State of the game at a given decision point. Includes everything needed to reconstruct the game
+ * up to this point, including a list of actions that have been taken in the game.
  */
 export class GameState {
     game: Game;
